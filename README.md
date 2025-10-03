@@ -13,7 +13,9 @@
 
 ## 📂 代码结构
 ├── CoOp.py           # CoOp模型定义
+
 ├── datasets.py       # 数据集封装 (StanfordCars)
+
 ├── main.py           # 程序入口
 
 每个文件都支持单独调用，方便快速测试和调试。  
