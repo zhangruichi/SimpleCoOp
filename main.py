@@ -61,7 +61,7 @@ def main(args):
         model.train()
         model.base_model.eval()
         for item_idx, (imgs, labels) in enumerate(train_dataloader):
-            imgs, labels = imgs.to("cuda:0"), labels.to("cuda:0")
+            imgs, labels = imgs.to(device), labels.to(device)
             logits = model(imgs)
             optimizer.zero_grad()
             loss = torch.nn.CrossEntropyLoss()(logits, labels)
@@ -76,7 +76,7 @@ def main(args):
             all_labels = []
             with torch.no_grad():
                 for item_idx, (imgs, labels) in enumerate(test_dataloader):
-                    preds = model(imgs.to("cuda:0")).argmax(dim=-1).cpu()
+                    preds = model(imgs.to(device)).argmax(dim=-1).cpu()
                     all_preds.append(preds)
                     all_labels.append(labels)
                     print(f"Eval Epoch {epoch}, idx {item_idx}/{len(test_dataloader)}")
