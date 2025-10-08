@@ -1,7 +1,7 @@
 # SimpleCoOp
 
 一个 [CoOp: Learning to Prompt for Vision-Language Models](https://arxiv.org/abs/2109.01134) **极简复现**。  
-不依赖复杂框架，没有臃肿封装，开箱即用。
+不依赖复杂框架，没有臃肿封装，帮助理解核心实现。
 ---
 
 ## 💡 理念
